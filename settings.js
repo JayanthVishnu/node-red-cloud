@@ -1,49 +1,20 @@
-require("dotenv").config();
-
 module.exports = {
-  // Use port from environment variable (Render supplies it)
+  // Enable verbose logging for troubleshooting
+  verbose: true,
+
+  // User directory for Node-RED ('.' means current directory)
+  userDir: "./",
+
+  // Flow file name
+  flowFile: process.env.FLOWS || "flows.json",
+
+  // Server port from environment variable
   uiPort: process.env.PORT || 1880,
 
-  // No admin authentication
+  // Disable adminAuth for now (enable if you add authentication)
   adminAuth: null,
 
-  // Optional credential secret for encrypting credentials
-  credentialSecret: process.env.CREDENTIAL_SECRET || null,
-
-  // Use flow file from env or default
-  flowFile: process.env.FLOWS || undefined,
-
-  editorTheme: {
-    page: {
-      title: "Node-RED Cloud",
-      favicon: "/favicon.ico",
-    },
-    header: {
-      title: "Node-RED on Render",
-      image: null,
-    },
-    deployButton: {
-      type: "simple",
-    },
-    palette: {
-      // Deprecated, replaced with externalModules
-    },
-    externalModules: {
-      palette: {
-        allowInstall: true,
-      },
-    },
-    projects: {
-      enabled: false,
-    },
-    codeEditor: {
-      lib: "monaco",
-      options: {},
-    },
-  },
-
-  functionGlobalContext: {},
-
+  // Enable editor and runtime logging
   logging: {
     console: {
       level: "info",
@@ -51,4 +22,6 @@ module.exports = {
       audit: false,
     },
   },
+
+  // Other settings can be added here as needed
 };

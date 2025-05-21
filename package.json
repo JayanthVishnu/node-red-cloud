@@ -1,24 +1,17 @@
 {
   "name": "node-red-cloud",
   "version": "1.0.0",
-  "description": "Node-RED deployment with MongoDB 4.x integration on Render",
+  "description": "Node-RED app deployed on Render",
   "main": "index.js",
   "scripts": {
-    "start": "node-red -v -u . --settings settings.js --port $PORT flows.json"
+    "start": "node-red -v -u . --settings settings.js --port $PORT"
   },
-  "keywords": [
-    "node-red",
-    "mongodb",
-    "iot",
-    "flow-based-programming"
-  ],
-  "author": "Jayanth",
-  "license": "MIT",
   "dependencies": {
-    "node-red": "^3.1.0",
+    "node-red": "^3.0.0",
     "node-red-contrib-mongodb4": "3.1.1"
   },
   "engines": {
-    "node": "20.x"
-  }
+    "node": ">=20.0.0"
+  },
+  "license": "MIT"
 }
