@@ -1,0 +1,12 @@
+{
+  "name": "node-red-cloud",
+  "version": "1.0.0",
+  "description": "Node-RED backend on Render",
+  "main": "index.js",
+  "scripts": {
+    "start": "node-red -v -u . --port $PORT"
+  },
+  "dependencies": {
+    "node-red": "^3.1.0"
+  }
+}
