@@ -1,12 +1,16 @@
 {
   "name": "node-red-cloud",
   "version": "1.0.0",
-  "description": "Node-RED backend on Render",
+  "description": "Node-RED backend for Render deployment",
   "main": "index.js",
   "scripts": {
     "start": "node-red -v -u . --port $PORT"
   },
   "dependencies": {
-    "node-red": "^3.1.0"
-  }
+    "node-red": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "MIT"
 }
