@@ -4,7 +4,7 @@
   "description": "Node-RED deployment with MongoDB 4.x integration on Render",
   "main": "index.js",
   "scripts": {
-    "start": "node-red -v -u . --settings settings.js --port $PORT"
+    "start": "node-red -v -u . --settings settings.js --port $PORT flows.json"
   },
   "keywords": [
     "node-red",

@@ -1,8 +1,17 @@
-// settings.js
-module.exports = {
-  uiPort: process.env.PORT || 1880, // ✅ Use Render's dynamic port
+require("dotenv").config();
 
-  adminAuth: null, // You can add admin credentials here if needed
+module.exports = {
+  // Use port from environment variable (Render supplies it)
+  uiPort: process.env.PORT || 1880,
+
+  // No admin authentication
+  adminAuth: null,
+
+  // Optional credential secret for encrypting credentials
+  credentialSecret: process.env.CREDENTIAL_SECRET || null,
+
+  // Use flow file from env or default
+  flowFile: process.env.FLOWS || undefined,
 
   editorTheme: {
     page: {
@@ -17,7 +26,12 @@ module.exports = {
       type: "simple",
     },
     palette: {
-      editable: true,
+      // Deprecated, replaced with externalModules
+    },
+    externalModules: {
+      palette: {
+        allowInstall: true,
+      },
     },
     projects: {
       enabled: false,
