@@ -1,2 +1,2 @@
-#
+# removing the .env file from version control
 .env
