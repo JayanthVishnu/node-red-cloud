@@ -1,17 +1,17 @@
 {
-  "name": "node-red-cloud",
+  "name": "backend",
   "version": "1.0.0",
-  "description": "Node-RED app deployed on Render",
+  "description": "Node-RED",
   "main": "index.js",
   "scripts": {
     "start": "node-red -v -u . --settings settings.js --port $PORT"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "node-red": "^3.0.0",
     "node-red-contrib-mongodb4": "3.1.1"
   },
   "engines": {
     "node": "20.x"
-  },
-  "license": "MIT"
+  }
 }

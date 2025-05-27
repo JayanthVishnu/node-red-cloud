@@ -33,7 +33,7 @@
     "type": "function",
     "z": "e0c05e5373ea668c",
     "name": "Build API URL",
-    "func": "const apiKey = \"07a27ad392fef6aa5603f5f78a0bc02f\";\nmsg.url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(msg.city)}&appid=${apiKey}&units=metric`;\nreturn msg;",
+    "func": "const apiKey = env.get(\"WEATHER_API_KEY\");\nmsg.url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(msg.city)}&appid=${apiKey}&units=metric`;\nreturn msg;",
     "outputs": 1,
     "timeout": "",
     "noerr": 0,
@@ -218,7 +218,7 @@
     "minPoolSize": "0",
     "maxPoolSize": "100",
     "maxIdleTimeMS": "0",
-    "uri": "mongodb+srv://jayanthvishnu56:YWHvAwWP8udHiKQN@cluster0.ktknyaw.mongodb.net/",
+    "uri": "${MONGODB_URI}",
     "advanced": "{}",
     "uriTabActive": "tab-uri-advanced"
   }
